@@ -1,4 +1,8 @@
 package br.com.senai.jseries.service.model;
 
-public record Rating() {
-}
+import com.fasterxml.jackson.annotation.JsonAlias;
+
+public record Rating(
+        @JsonAlias("Source") String source,
+        @JsonAlias("Value") String value
+) {}
